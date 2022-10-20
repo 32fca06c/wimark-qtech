@@ -17,3 +17,5 @@ sudo wget https://raw.githubusercontent.com/32fca06c/qtech/main/master-backup.sh
 sudo chmod ug+x /etc/wimark/master-backup.sh
 # Keepalived
 sudo systemctl enable --now keepalived
+sudo echo "net.ipv4.ip_forward = 1" >> /etc/sysctl.conf
+sudo echo "net.ipv4.ip_nonlocal_bind = 1" >> /etc/sysctl.conf; sysctl -p
