@@ -11,3 +11,4 @@ wget https://files.qtech.ru/upload/wireless/QWC-VC/QWC-VC-1.8.1-19-08-2022-insta
 unzip -q QWC-VC-1.8.1-19-08-2022-installer.zip
 rm QWC-VC-1.8.1-19-08-2022-installer.zip
 sudo bash QWC-VC-1.8.1-19-08-2022-installer.run
+# pcsync-https-https-http-mqtt-openvpn-isakmp-ipsec-nat-t
