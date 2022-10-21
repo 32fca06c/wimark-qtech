@@ -18,11 +18,10 @@ sudo systemctl enable --now docker
 curl -sSL https://repo.45drives.com/setup | sudo bash
 sudo dnf install cockpit-navigator -y
 # Wimark
-URL=$(wget -nv -O- https://www.qtech.ru/catalog/wireless/lan_controllers/qwc_wm/#documentation | grep -Po 'https:\/\/files\.qtech\.ru\/upload\/wireless\/QWC-VC\/QWC-VC-[\d\.]+-\d{2}-\d{2}-\d{4}-installer\.zip')
-wget -O QWC-VC-installer.zip $URL
-unzip -q QWC-VC-installer.zip
-rm QWC-VC-installer.zip
-sudo bash QWC-VC-1.8.1-19-08-2022-installer.run
+URL=$(wget -nv -O- https://www.qtech.ru/catalog/wireless/lan_controllers/qwc_wm/#documentation | grep -Po 'https:\/\/files\.qtech\.ru\/upload\/wireless\/QWC-VC\/QWC-VC-[\d\.]+-HA-\d{2}-\d{2}-\d{4}-installer\.zip')
+wget -O QWC-VC-HA-installer.zip $URL
+unzip -q QWC-VC-HA-installer.zip
+sudo bash QWC-VC-*-installer.run --target /home/$(whoami)/QWC-VC-HA-installer
 # ssh
 ssh-keygen
 cat ~/.ssh/id_rsa.pub | ssh $(whoami)@remote_host "mkdir -p ~/.ssh && cat >> ~/.ssh/authorized_keys"
