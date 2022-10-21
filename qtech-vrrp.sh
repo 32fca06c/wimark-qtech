@@ -23,7 +23,7 @@ unzip -q QWC-VC-1.8.1-19-08-2022-installer.zip
 rm QWC-VC-1.8.1-19-08-2022-installer.zip
 # ssh
 ssh-keygen
-cat ~/.ssh/id_rsa.pub | ssh user@remote_host "mkdir -p ~/.ssh && cat >> ~/.ssh/authorized_keys"
+cat ~/.ssh/id_rsa.pub | ssh $(whoami)@remote_host "mkdir -p ~/.ssh && cat >> ~/.ssh/authorized_keys"
 sudo wget https://raw.githubusercontent.com/32fca06c/qtech/main/master-backup.sh -o /etc/wimark/master-backup.sh
 sudo chmod ug+x /etc/wimark/master-backup.sh
 # Keepalived
