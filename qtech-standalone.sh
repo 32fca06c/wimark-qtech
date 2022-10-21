@@ -8,4 +8,4 @@ URL=$(wget -nv -O- https://www.qtech.ru/catalog/wireless/lan_controllers/qwc_wm/
 wget -O QWC-VC-installer.zip $URL
 unzip -q QWC-VC-installer.zip
 rm QWC-VC-installer.zip
-sudo bash QWC-VC-1.8.1-19-08-2022-installer.run
+sudo bash QWC-VC-*-installer.run
